@@ -11,5 +11,316 @@ html{
 body{
     line-height: 1.6;
     font-size: 1.6rem;
-    font-size: "Roboto";
+    font-family: "Roboto";
 }
+
+:root {
+    --orange: #E76F51;
+    --white: #fff;
+    --grey: #D2D2D2;
+    --dark:#3B3735;
+}
+
+
+/* 
+##################
+    Reset Tags
+##################
+*/
+
+a{
+    text-decoration: none;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+
+/* 
+#################
+    Component
+#################
+*/
+
+
+.btn{
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    height: 4.5rem;
+    justify-content: center;
+    color: var(--dark);
+    border-radius: 3rem;
+}
+
+
+/* 
+##################
+    Header
+##################
+*/
+
+
+.header{
+    width: 100%;
+    height: 50rem;
+    background: linear-gradient(rgba(59,55,53,0.5), rgba(59,55,53,0.5)), url("../images/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 8rem 8rem;
+    position: relative;
+}
+
+/* 
+############
+    Navbar
+############
+*/
+
+.navbar{
+    padding: 2.5rem 1.7rem 0 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-right: 4rem;
+}
+
+.logo__image{
+
+}
+
+/* 
+#############
+    PC Menu
+#############
+*/
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu__items{
+    display: none;
+    gap: 1.5rem;
+}
+
+.menu__item{
+
+}
+
+.menu__link{
+    transition: all 110ms ease-in;
+    color: var(--grey);
+}
+
+.menu__link:hover{
+    color: var(--white);
+}
+
+.menu__link--active{
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+}
+
+.menu__link--active::before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    left: 0;
+    background-color: var(--orange);
+    z-index: -1;
+
+}
+
+.menu-auth{
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-auth__auth-link--border{
+    padding: 1rem 2.5rem;
+    border: .15rem solid var(--white);
+    border-radius: 10rem;
+    transition: all 150ms ease-in;
+}
+
+.menu-auth__auth-link--border:hover{
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.menu-auth__auth-link{
+    color: var(--white);
+    font-family: "Roboto Medium";
+}
+
+
+/* 
+##################
+    Mobile Menu
+##################
+*/
+
+.menu-mobile{
+    color: var(--white);
+    width: 23rem;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    left: -23rem;
+    top: 0;
+    padding-top: 3rem;
+    transition: all 180ms ease-in;
+}
+
+.menu-mobile__items{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    align-items: center;
+}
+
+.menu-mobile__link{
+    color: var(--white);
+}
+
+.menu-mobile__item{
+    font-size: 1.7rem;
+}
+
+.menu-mobile__auth-link{
+    width: 80%;
+
+}
+
+.menu-auth-mobile{
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+}
+
+.menu-auth-mobile__link{
+    color: var(--white);
+    flex: 1;
+    border: .2rem solid var(--white);
+    padding: .6rem 0;
+    text-align: center;
+}
+
+.hamburger__checkbox{
+    display: none;
+}
+
+.hamburger__btn{
+    background-color: var(--white);
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburgure_lines{
+    width: 3.5rem;
+    height: .3rem;
+    background-color: var(--orange);
+    position: relative;
+    transition: all 100ms ease-in-out;
+}
+
+.hamburgure_lines::before,
+.hamburgure_lines::after{
+    transition: all 100ms ease-in-out;
+    content: ' ';
+    position: absolute;
+    width: 3.5rem;
+    height: .3rem;
+    background-color: var(--orange);
+    left: 0;
+    right: 0;
+    transform: rotate(0);
+}
+
+.hamburgure_lines::before{
+    top: -1rem;
+}
+
+.hamburgure_lines::after{
+    top: 1rem;
+}
+
+.hamburger__checkbox:checked + .hamburger__btn .hamburgure_lines{
+    background-color: transparent;
+}
+
+.hamburger__checkbox:checked + .hamburger__btn .hamburgure_lines::before{
+    
+    transform: rotate(45deg) translateY(0rem);
+    top: 0;
+}
+
+.hamburger__checkbox:checked + .hamburger__btn .hamburgure_lines::after{
+    transform: rotate(-45deg) translateY(0rem);
+    top: 0;
+}
+
+
+
+/* 
+#####################
+    Content Header
+#####################
+*/
+
+.content-header{
+    color: var(--white);
+    width: 100%;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content-header__title{
+    font-family: "Archivo Black";
+    font-size: 5rem;
+    width: 32rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.content-header__paragraph{
+    width: 52rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.content-header__button{
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    background: var(--orange);
+    height: 4.5rem;
+    justify-content: center;
+    color: var(--white);
+    border-radius: 3rem;
+} 
+
+

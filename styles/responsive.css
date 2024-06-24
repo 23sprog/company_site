@@ -1,0 +1,28 @@
+
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+    .hamburger{
+        display: none;
+    }
+    .menu-mobile{
+        display: none;
+    }
+    .menu__items{
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-auth{
+        display: flex;
+    }
+}
+
+@media (min-width: 1400px) {
+
+}
