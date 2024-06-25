@@ -1,28 +1,37 @@
+@media (max-width: 400px) {
+    .content-header__title {
 
-
-
-@media (min-width: 576px) {
-
-}
-
-@media (min-width: 768px) {
-    .hamburger{
-        display: none;
+        font-size: 3rem;
     }
-    .menu-mobile{
-        display: none;
-    }
-    .menu__items{
-        display: flex;
-    }
-}
 
-@media (min-width: 1200px) {
-    .menu-auth{
-        display: flex;
-    }
+        
 }
 
 @media (min-width: 1400px) {
 
+}
+
+@media (min-width: 1200px) {
+
+    .content-header__paragraph{
+        max-width: 34rem;
+    }
+
+    .menu-auth{
+        display: flex;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .menu__items{
+        display: flex;
+    }
+    .menu-mobile{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
 }

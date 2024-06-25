@@ -57,15 +57,15 @@ ul, li{
 
 
 /* 
-##################
+############
     Header
-##################
+############
 */
 
 
 .header{
     width: 100%;
-    height: 50rem;
+    height: 87vh;
     background: linear-gradient(rgba(59,55,53,0.5), rgba(59,55,53,0.5)), url("../images/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -112,6 +112,13 @@ ul, li{
 
 .menu__item{
 
+}
+
+.menu__item::before{
+    content: '';
+    width: 1.2rem;
+    height: .3rem;
+    background-color: var(--orange);
 }
 
 .menu__link{
@@ -199,7 +206,40 @@ ul, li{
 
 .menu-mobile__item{
     font-size: 1.7rem;
+    position: relative;
+    transition: 120ms all ease-in-out;
 }
+
+.menu-mobile__item:hover{
+    padding-left: 1.5rem;
+}
+
+.menu-mobile__item::before{
+    content: ' ';
+    height: .3rem;
+    width: 0rem;
+    background-color: var(--orange);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+    transition: 120ms all ease-in-out;
+}
+
+.menu-mobile__item:hover::before{
+    width: 1.2rem;
+}
+
+.menu-mobile__item--active{
+    padding-left: 1.5rem;
+}
+
+.menu-mobile__item--active::before{
+    width: 1.2rem;
+}
+
+
 
 .menu-mobile__auth-link{
     width: 80%;
@@ -218,7 +258,15 @@ ul, li{
     border: .2rem solid var(--white);
     padding: .6rem 0;
     text-align: center;
+    transition: 120ms all ease-in-out;
 }
+
+.menu-auth-mobile__link:hover{
+    background: var(--white);
+    color: var(--dark);
+}
+
+
 
 .hamburger__checkbox{
     display: none;
@@ -290,7 +338,7 @@ ul, li{
 .content-header{
     color: var(--white);
     width: 100%;
-    min-height: 40rem;
+    min-height: 50rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,26 +349,20 @@ ul, li{
 .content-header__title{
     font-family: "Archivo Black";
     font-size: 5rem;
-    width: 32rem;
+    max-width: 36rem;
     text-align: center;
     line-height: 1.3;
 }
 
 .content-header__paragraph{
-    width: 52rem;
+    max-width: 38rem;
     text-align: center;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
 }
 
 .content-header__button{
-    width: 18rem;
-    display: flex;
-    align-items: center;
     background: var(--orange);
-    height: 4.5rem;
-    justify-content: center;
     color: var(--white);
-    border-radius: 3rem;
 } 
 
 
